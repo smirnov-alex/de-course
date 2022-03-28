@@ -1,0 +1,31 @@
+<%- require('../layouts/head.ejs')(title='Главная') %>
+<main>
+    <section class="section">
+
+        <div>
+            Обычная кнопка:
+            <%- require("../components/button/template.ejs")() %>
+        </div>
+
+        <div>
+            Кнопка с иконкой:
+            <%- require("../components/button/template.ejs")({
+                icon: "icon-eye"
+            }) %>
+        </div>
+
+        <div>
+            Кнопка-ссылка:
+            <%- require("../components/button/template.ejs")({
+                label: "Contact us",
+                href: "/"
+            }) %>
+        </div>
+
+    </section>
+    <%- require('../layouts/hero.ejs')() %>
+    <%- require('../layouts/geography.ejs')() %>
+    <%- require('../layouts/events.ejs')() %>
+    <%- require('../layouts/newsletter.ejs')() %>
+</main>
+<%- require('../layouts/foot.ejs')()%>

@@ -1,0 +1,9 @@
+{
+  "extraClasses": [],
+  "extraAttrs":[],
+  "type": "button",
+  "href": "",
+  "label": "Текст кнопки",
+  "icon": false,
+  "disabled": false
+}

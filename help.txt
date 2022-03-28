@@ -2,3 +2,6 @@
 npm int -y  
 //установить пакет
 npm install
+
+//запустить сборку в режиме разработке
+npx webpack --mode development
