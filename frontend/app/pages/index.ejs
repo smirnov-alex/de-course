@@ -1,28 +1,6 @@
 <%- require('../layouts/head.ejs')(title='Главная') %>
 <main>
-    <section class="section">
-
-        <div>
-            Обычная кнопка:
-            <%- require("../components/button/template.ejs")() %>
-        </div>
-
-        <div>
-            Кнопка с иконкой:
-            <%- require("../components/button/template.ejs")({
-                icon: "icon-eye"
-            }) %>
-        </div>
-
-        <div>
-            Кнопка-ссылка:
-            <%- require("../components/button/template.ejs")({
-                label: "Contact us",
-                href: "/"
-            }) %>
-        </div>
-
-    </section>
+    <h1 class="title visually-hidden">"O Company" - с заботой о природе.</h1>
     <%- require('../layouts/hero.ejs')() %>
     <%- require('../layouts/geography.ejs')() %>
     <%- require('../layouts/events.ejs')() %>

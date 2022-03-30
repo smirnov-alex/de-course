@@ -7,4 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%- title %></title>
 </head>
+<header class="header">
+    <a href="/" class="header__logo">
+        <img src="../images/logo.png" alt="Логотип компании" class="header__image">
+    </a>
+    <nav class="header__nav">
+        <ul class="main-nav__list">
+            <li class="main-nav__item">О компании</li>
+            <li class="main-nav__item">Продукция</li>
+            <li class="main-nav__item">Исследования</li>
+            <li class="main-nav__item">События</li>
+            <li class="main-nav__item">Контакты</li>
+        </ul>
+    </nav>
+    <%- require("../components/button/template.ejs")({
+        label: "Обратная связь",
+    }) %>
+    <%- require("../components/lang-switcher/template.ejs")() %>
+</header>
 <body>

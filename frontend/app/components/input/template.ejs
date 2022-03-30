@@ -2,15 +2,40 @@
 const cfg = { ...require("./data.json"), ...arguments?.[0] }
 const {
     extraClasses,
-    extraAttrs
+    extraAttrs,
+    id,
+    name,
+    type,
+    placeholder,
+    required,
+    value,
+    autocomplete,
+    disabled,
+    readonly
 } = cfg
 %>
 <%
 const classes = `example ${extraClasses.join(" ")}`.trim()
 const attrs = extraAttrs.join(" ")
+
+const getLabelMarkup = () => {
+  return `
+    <label for="${ id }>Текст лейбла</label>
+  `
+}
+
 %>
-<div
+<input
         class="<%= classes %>"
         <%- attrs %>
+        <% if (disabled) { %>
+          disabled
+        <% } %>
+        <% if (required) { %>
+          required
+        <% } %>
+        <% if (readonly) { %>
+          readonly
+        <% } %>
 >
-</div>
+</input>
