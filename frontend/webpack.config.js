@@ -1,10 +1,10 @@
 const path = require("path");
 const fs = require("fs");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require("css-minimizer-webpack-plugin");
-const SpriteLoaderPlugin = require("svg-sprite-loader/plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin")
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const ejsFiles = [
     {
@@ -14,10 +14,11 @@ const ejsFiles = [
     },
     {
         filePath: path.resolve(__dirname, './app/templates'),
-        outputPath: './',
+        outputPath: './templates',
         inject: false
     }
 ];
+
 
 module.exports = (env, {mode}) => {
 
@@ -34,13 +35,13 @@ module.exports = (env, {mode}) => {
                 const extension = parts[1];
                 const _filePath = path.resolve(__dirname, `${filePath}/${name}.${extension}`);
                 htmlPlugins.push(
-                    new HtmlWebpackPlugin({
-                        filename: `${outputPath}/${name}.html`,
-                        template: `!!ejs-compiled-loader!${_filePath}`,
-                        scriptLoading: 'blocking',
-                        minify: false,
-                        inject
-                    })
+                  new HtmlWebpackPlugin({
+                      filename: `${outputPath}/${name}.html`,
+                      template: `!!ejs-compiled-loader!${_filePath}`,
+                      scriptLoading: 'blocking',
+                      minify: false,
+                      inject
+                  })
                 )
             })
         });
@@ -83,13 +84,6 @@ module.exports = (env, {mode}) => {
                     ]
                 },
                 {
-                    test: /\.(png|jpe?g|gif)$/i,
-                    loader: 'file-loader',
-                    options: {
-                        name: 'images/[name].[ext]',
-                    },
-                },
-                {
                     test: /\.p?css$/i,
                     use: [
                         isDev ? "style-loader" : MiniCssExtractPlugin.loader,
@@ -102,6 +96,19 @@ module.exports = (env, {mode}) => {
                                 postcssOptions: {
                                     config: './postcss.config.js'
                                 }
+                            }
+                        }
+                    ]
+                },
+                {
+                    test: /\.svg$/,
+                    exclude: path.resolve(__dirname, './app/fonts/'),
+                    use: [
+                        {
+                            loader: 'svg-sprite-loader',
+                            options: {
+                                extract: true,
+                                spriteFilename: 'icons.svg',
                             }
                         }
                     ]
@@ -140,11 +147,6 @@ module.exports = (env, {mode}) => {
             new SpriteLoaderPlugin({
                 plainSprite: true
             }),
-        ],
-        optimization: {
-            minimizer: [
-                new OptimizeCSSAssetsPlugin({})
-            ]
-        }
+        ]
     };
 }

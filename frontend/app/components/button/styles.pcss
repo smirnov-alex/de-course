@@ -1,18 +1,83 @@
 @import "../../styles/mixins.pcss";
 
 .button {
-    align-items: center;
-    padding: 4px 12px;
-    background-color: var(--main-dark);
+    --height: 40px;
+    --paddingX: 20px;
+    --textColor: var(--c-light);
+    --bgColor: var(--c-main);
+    --iconSize: 26px;
+    --iconOffset: 15px;
+    --iconColor: var(--c-light);
+
+    --hoverTextColor: var(--c-light);
+    --hoverBgColor: var(--c-accent);
+    --hoverIconColor: var(--c-light);
+
+    --focusTextColor: var(--c-dark);
+    --focusBgColor: var(--c-light);
+    --focusIconColor: var(--c-dark);
+
+    --disabledTextColor: var(--c-dark);
+    --disabledBgColor: var(--c-gray);
+    --disabledIconColor: var(--c-dark);
+
+    display: inline-flex;
+    justify-content: center;
+    padding-inline: var(--paddingX);
     cursor: pointer;
-    color: var(--main-light);
-    height: 40px;
+    color: var(--textColor);
+    background-color: var(--bgColor);
+    height: var(--height);
+    text-align: center;
+    padding-top: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    border: none;
+
 
     &:hover {
-        color: var(--main-light-text);
+        color: var(--hoverTextColor);
+        background-color: var(--hoverBgColor);
+
+        .button__icon {
+            --color: var(--hoverIconColor);
+        }
     }
 
-    &:active {
-        transform: scale(1.05);
+    &:focus {
+        color: var(--focusTextColor);
+        background-color: var(--focusBgColor);
+
+        .button__icon {
+            --color: var(--focusIconColor);
+        }
+    }
+
+    &:disabled {
+        color: var(--disabledTextColor);
+        background-color: var(--disabledBgColor);
+
+        .button__icon {
+            --color: var(--disabledIconColor);
+        }
+    }
+
+    &--transparent {
+        --textColor: var(--c-gray);
+        --bgColor: transparent;
+        --iconColor: var(--c-main);
+    }
+
+    &__icon {
+        --size: var(--iconSize);
+        --color: var(--iconColor);
+    }
+
+    & svg {
+        margin-left: 15px;
+        margin-top: -3px;
     }
 }

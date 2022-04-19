@@ -8,5 +8,6 @@ import './icons.pcss';
 import './globals.pcss';
 import './fonts.pcss';
 import './mixins.pcss';
+import './typo.pcss';
 
 requireAll(require.context('./blocks', false, /\.(pcss|css)$/i))

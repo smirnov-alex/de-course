@@ -1,3 +1,16 @@
 <section class="geography">
-    Section Geography
+    <div class="geography__description">
+        <h2 class="geography__title">География присутствия</h2>
+        <p class="geography__special-text"><span class="geography__num"> &gt;100 </span> <br> хороших мест есть
+            в России</p>
+        <p class="geography__text">Когда речь идет о качестве изоляции, мы понимаем ваши потребности, что подтверждено
+            отзывами более 400 постоянных клиентов по всему миру. </p>
+        <%- require("../components/button/template.ejs")({
+            label: "О компании",
+            icon: "arrow-button",
+        }) %>
+    </div>
+    <div class="geography__map">
+        <%- require("../components/map/template.ejs")() %>
+    </div>
 </section>

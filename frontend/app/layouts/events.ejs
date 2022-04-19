@@ -1,3 +1,66 @@
 <section class="events">
-    Section Events
+    <h2 class="events__title">События</h2>
+    <ul class="events__list">
+        <li class="events__item events__item--full-height">
+            <div class="events__timer">
+                <p class="events__timer-text">До начала выставки осталось:</p>
+                <p class="events__timer-time">22 м : 12 ч : 4 д</p>
+            </div>
+            <div class="event-card">
+                <img src="../images/events-1.jpg"
+                     class="event-card__image event-card__image--full-height"
+                     width="425" height="500" loading="lazy">
+                <div class="event-card__body">
+                    <span class="event-card__date event-card__date--top">06.08 -30.08</span>
+                    <p class="event-card__text event-card__text--top">Международная выставка «ДОБРЫЙ МИР-2022»</p>
+                </div>
+            </div>
+        </li>
+        <li class="events__item events__item--full-height">
+            <div class="event-card">
+                <img src="../images/events-2.jpg"
+                     class="event-card__image"
+                     width="425" height="250" loading="lazy">
+                <div class="event-card__body">
+                    <span class="event-card__date">06.08.2019</span>
+                    <p class="event-card__text">Более 800 детёнышей ларги появились на свет в южном Приморье</p>
+                </div>
+            </div>
+        </li>
+        <li class="events__item">
+            <div class="event-card">
+                <div class="event-card__body">
+                    <span class="event-card__date">06.08.2019</span>
+                    <p class="event-card__text">Новую популяцию синих китов обнаружили в Индийском океане</p>
+                </div>
+            </div>
+        </li>
+        <li class="events__item events__item--full-height">
+            <div class="event-card">
+                <img src="../images/events-3.jpg"
+                     class="event-card__image"
+                     width="425" height="250" loading="lazy">
+                <div class="event-card__body">
+                    <span class="event-card__date">06.08.2019</span>
+                    <p class="event-card__text">Как выглядит новорожденный муравьед: фото и видео</p>
+                </div>
+            </div>
+        </li>
+        <li class="events__item">
+            <div class="event-card event-card--special">
+                <div class="event-card__body">
+                    <span class="event-card__date">06.08.2019</span>
+                    <p class="event-card__text event-card__text--special">Проект WWF получил признание на Парижском
+                        форуме мира</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <%- require("../components/button/template.ejs")({
+        extraClasses: [
+            "button--transparent", "button-events"
+        ],
+        label: "В раздел",
+        icon: "arrow-button-blue",
+    }) %>
 </section>

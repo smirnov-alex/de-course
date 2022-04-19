@@ -1,0 +1,46 @@
+@import "../media.pcss";
+
+.header {
+    display: flex;
+    margin-inline: 40px;
+    margin-bottom: 20px;
+
+    &__logo {
+        margin-right: 80px;
+        margin-top: 20px;
+        text-decoration: none;
+        display: flex;
+
+        &-text {
+            vertical-align: top;
+            padding-top: 20px;
+            padding-left: 8px;
+            fill: var(--c-main);
+        }
+
+        &:hover {
+            opacity: 0.6;
+            & svg {
+                fill: var(--c-accent);
+            }
+        }
+
+        &:active {
+            opacity: 0.3;
+            & svg {
+                fill: var(--c-main);
+            }
+        }
+    }
+}
+
+.button--header {
+    margin-top: 25px;
+    margin-right: 30px;
+}
+
+.button-search {
+    margin-top: 21px;
+    margin-left: 38px;
+    stroke-width: 2;
+}

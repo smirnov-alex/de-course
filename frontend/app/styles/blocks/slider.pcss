@@ -1,0 +1,76 @@
+@import "../media.pcss";
+
+.slider {
+    position: relative;
+
+    &__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        counter-reset: myCounter;
+    }
+
+    &__item {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            counter-increment: myCounter;
+            content: "0" counter(myCounter);
+            color: transparent;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: var(--c-light);
+            font-family: var(--base-font-family);
+            font-weight: 800;
+            font-size: 180px;
+            line-height: 245px;
+            margin-left: -55px;
+            margin-top: 140px;
+            z-index: -5;
+            position: absolute;
+        }
+    }
+
+    &__wrapper {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--c-dark-shadow);
+        z-index: -5;
+    }
+
+    &__back {
+        position: absolute;
+        z-index: -10;
+        width: 100%;
+        height: 100%;
+        background-color: var(--c-dark-shadow);
+    }
+
+    &__description {
+        margin-left: 210px;
+        width: 40%;
+        margin-bottom: 370px;
+    }
+
+    &__title {
+        margin: 0;
+        padding: 0;
+        padding-top: 189px;
+        color: var(--c-light);
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        font-size: 56px;
+        line-height: 66px;
+    }
+
+    &__text {
+        color: var(--c-light);
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 40px;
+    }
+}

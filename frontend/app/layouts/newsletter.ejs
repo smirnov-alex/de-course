@@ -1,3 +1,21 @@
 <section class="newsletter">
-    Section Newsletter
+    <h2 class="newsletter__title">Новостная рассылка</h2>
+    <p class="newsletter__description">Будьте в курсе самых свежих новостей, новых решений и реализованных проектов</p>
+    <form class="newsletter__form">
+        <p class="newsletter__email">
+            <label class="visually-hidden" for="newsletter__email">Email</label>
+            <input class="newsletter__field" placeholder="Введите ваш e-mail" type="email" name="newsletter-email"
+                   id="newsletter-email"
+                   required>
+            <%- require("../components/button/template.ejs")({
+                label: "подписаться на новостную рассылку",
+            }) %>
+        </p>
+        <div class="newsletter__aggreement-wrapper">
+            <input class="newsletter__agreement" name="agreement" type="checkbox" id="newsletter__agreement" checked
+                   required>
+            <label class="newsletter__agreement-label" for="newsletter__agreement">Согласен (согласна) с политикой
+                конфиденциальности</label>
+        </div>
+    </form>
 </section>

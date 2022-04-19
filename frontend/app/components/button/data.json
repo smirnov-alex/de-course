@@ -4,6 +4,7 @@
   "type": "button",
   "href": "",
   "label": "Текст кнопки",
+  "labelIsHidden": false,
   "icon": false,
   "disabled": false
 }

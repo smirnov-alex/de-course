@@ -1,0 +1,220 @@
+.footer {
+    background-color: var(--c-main);
+    padding-top: 335px;
+
+    &__wrapper {
+        margin-inline: 110px;
+        padding-bottom: 110px;
+        color: var(--c-light);
+        font-family: var(--base-font-family);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        display: flex;
+        border-bottom: 1px solid var(--c-light-3);
+    }
+
+    &__logo {
+        margin-right: 224px;
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        &:active {
+            opacity: 0.3;
+        }
+    }
+
+    &-nav__list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-right: 60px;
+    }
+
+    &-nav__item:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    &__copyright {
+        margin-inline: 110px;
+        margin-top: 28px;
+        padding-bottom: 32px;
+        font-family: var(--base-font-family);
+        font-style: normal;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 18px;
+        color: var(--c-light);
+        display: flex;
+
+        &-main {
+            font-weight: 400;
+            margin-right: 190px;
+            display: block;
+            opacity: 0.8;
+        }
+
+        &-text {
+            margin: 0;
+            padding: 0;
+            opacity: 0.8;
+        }
+
+        &-rules {
+            text-decoration: none;
+            color: var(--c-light);
+            opacity: 0.8;
+
+            &:hover {
+                text-decoration: underline;
+                opacity: 1;
+            }
+
+            &:active {
+                color: var(--c-accent);
+            }
+        }
+    }
+}
+
+.production {
+
+    &__title {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__link {
+        text-transform: none;
+        text-decoration: none;
+        font-family: var(--base-font-family);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: var(--c-light);
+        opacity: 0.8;
+
+        &:hover {
+             opacity: 1;
+         }
+        &:active{
+            opacity: 0.3;
+        }
+
+        &--main {
+            text-transform: uppercase;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--c-light);
+
+            &:hover {
+                color: var(--c-gray);
+            }
+
+            &:active{
+                opacity: 0.3;
+            }
+        }
+
+        &--email {
+            opacity: 1;
+            text-decoration: underline;
+            color: var(--c-light);
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 22px;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+            &:hover {
+                color: var(--c-gray);
+            }
+
+            &:active{
+                opacity: 0.3;
+            }
+        }
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        margin-right: 220px;
+    }
+
+    &__item {
+        margin-top: 16px;
+    }
+}
+
+.contacts {
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        margin-right: 110px;
+    }
+
+    &__title {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 16px;
+        display: block;
+    }
+
+    &__item {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 10px;
+        text-transform: none;
+    }
+
+    &__text {
+        font-weight: 700;
+        text-transform: none;
+    }
+}
+
+.socials {
+
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 19px;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        margin-top: 16px;
+        justify-content: right;
+        display: flex;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 25px;
+    }
+
+    &__link svg{
+        fill: var(--c-accent-2);
+    }
+
+    &__link:hover svg{
+        fill: var(--c-light);
+    }
+
+    &__link:active svg{
+        fill: var(--c-accent);
+    }
+
+
+}

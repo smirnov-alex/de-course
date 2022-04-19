@@ -1,1 +1,12 @@
-<p>Компонент lang-switcher</p>
+<%
+const cfg = { ...require("./data.json"), ...arguments?.[0] }
+const {
+    extraClasses,
+    extraAttrs
+} = cfg
+%>
+<select class="select-control" id="sorting" name="sorting">
+    <option value="ru">RU</option>
+    <option value="en">EN</option>
+    <option value="de">DE</option>
+</select>

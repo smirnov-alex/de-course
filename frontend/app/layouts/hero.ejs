@@ -1,27 +1,108 @@
 <section class="hero">
-    <div class="hero__slider"></div>
-    <div class="hero__advantages">
+    <div class="swiper slider-hero">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <ol class="swiper-wrapper slider__list">
+            <li class="swiper-slide slider__item">
+                <div class="slider__wrapper"></div>
+                <img src="../images/slider_1.jpg" alt="Фоновое изображение" width="1920" height="1200"
+                     class="slider__back">
+                <div class="slider__description">
+                    <h2 class="slider__title">Проект <br> «Люди — природе»</h2>
+                    <p class="slider__text">Проект «Люди — природе» стартовал весной 2019 года при поддержке
+                        Европейского Союза в России и направлен на вовлечение общественности в охрану окружающей среды в
+                        Кавказском, Алтае-Саянском и Амурском экорегионах.</p>
+                    <%- require("../components/button/template.ejs")({
+                        label: "В каталог",
+                        icon: "arrow-button",
+                    }) %>
+                </div>
+            </li>
+            <li class="swiper-slide slider__item">
+                <div class="slider__wrapper"></div>
+                <img src="../images/slider_2.jpg" alt="Фоновое изображение" width="1920" height="1200"
+                     class="slider__back">
+                <div class="slider__description">
+                    <h2 class="slider__title">Lorem ipsum <br> dolor sit amet</h2>
+                    <p class="slider__text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <%- require("../components/button/template.ejs")({
+                        label: "В каталог",
+                        icon: "arrow-button",
+                    }) %>
+                </div>
+            </li>
+            <li class="swiper-slide slider__item">
+                <div class="slider__wrapper"></div>
+                <img src="../images/slider_3.jpg" alt="Фоновое изображение" width="1920" height="1200"
+                     class="slider__back">
+                <div class="slider__description">
+                    <h2 class="slider__title">Lorem ipsum <br> dolor sit amet</h2>
+                    <p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <%- require("../components/button/template.ejs")({
+                        label: "В каталог",
+                        icon: "arrow-button",
+                    }) %>
+                </div>
+            </li>
+            <li class="swiper-slide slider__item">
+                <div class="slider__wrapper"></div>
+                <img src="../images/slider_4.jpg" alt="Фоновое изображение" width="1920" height="1200"
+                     class="slider__back">
+                <div class="slider__description">
+                    <h2 class="slider__title">Lorem ipsum <br> dolor sit amet</h2>
+                    <p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <%- require("../components/button/template.ejs")({
+                        label: "В каталог",
+                        icon: "arrow-button",
+                    }) %>
+                </div>
+            </li>
+            <li class="swiper-slide slider__item">
+                <div class="slider__wrapper"></div>
+                <img src="../images/slider_5.jpg" alt="Фоновое изображение" width="1920" height="1200"
+                     class="slider__back">
+                <div class="slider__description">
+                    <h2 class="slider__title">Lorem ipsum <br> dolor sit amet</h2>
+                    <p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <%- require("../components/button/template.ejs")({
+                        label: "В каталог",
+                        icon: "arrow-button",
+                    }) %>
+                </div>
+            </li>
+        </ol>
+    </div>
+    <div class="hero__adv">
         <ul class="hero__adv-list">
             <li class="hero__adv-item">
                 <span class="hero__adv-amount"> 60 </span>
-                лет на рынке
+                <span class="hero__adv-text">лет на рынке</span>
             </li>
             <li class="hero__adv-item">
                 <span class="hero__adv-amount"> 5 </span>
-                новых мест
+                <span class="hero__adv-text">новых мест</span>
             </li>
             <li class="hero__adv-item">
-                <span class="hero__adv-amount"> >600 </span>
-                миллионов выделено
+                <span class="hero__adv-amount"> &gt;600 </span>
+                <span class="hero__adv-text">миллионов <br> выделено</span>
             </li>
             <li class="hero__adv-item">
-                <span class="hero__adv-amount"> >100 </span>
-                стран присутствия
+                <span class="hero__adv-amount"> &gt;100 </span>
+                <span class="hero__adv-text">стран <br> присутствия</span>
             </li>
             <li class="hero__adv-item">
                 <span class="hero__adv-amount"> 478 </span>
-                добрых дел было сделано в 2021 году
+                <span class="hero__adv-text">добрых дел было сделано <br> в 2021 году</span>
             </li>
         </ul>
     </div>
+
 </section>

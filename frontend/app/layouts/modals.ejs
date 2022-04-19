@@ -1,0 +1,18 @@
+<div class="modal modal--feedback" id="modal-feedback"
+     data-js-modal>
+    <header class="modal__header">
+        <div class="modal__title h3"></div>
+    </header>
+    <section class="modal__body">
+        <form class="form" action="./json/exampleSuccessForm.json" method="get" autocomplete="off" novalidate data-js-form>
+            <input type="text" name="user-name" class="form-input" data-js-input-required="">
+            <input type="email" name="user-email" class="form-input" data-js-input-required="email">
+            <%- require("../components/button/template.ejs")({
+                label: "Отправить",
+                type: "submit"
+            }) %>
+        </form>
+    </section>
+    <footer class="modal__actions">
+    </footer>
+</div>

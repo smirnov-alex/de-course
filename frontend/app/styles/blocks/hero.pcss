@@ -1,0 +1,41 @@
+.hero {
+    position: relative;
+
+    &__adv {
+        position: absolute;
+        bottom: 0;
+        z-index: 3;
+        width: 100%;
+    }
+
+  &__adv-list {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      background-color: var(--c-main-2);
+      padding-inline: 110px;
+  }
+
+    &__adv-item {
+        color: var(--c-light);
+        font-family: var(--base-font-family);
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 22px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        display: flex;
+    }
+    &__adv-amount {
+        font-size: 64px;
+        line-height: 87px;
+        margin-right: 10px;
+    }
+
+    &__adv-text {
+        align-self: center;
+    }
+}
