@@ -3,6 +3,7 @@
     padding-top: 335px;
 
     @media (max-width: 1279px) {
+        padding-top: 255px;
     }
 
     @media (max-width: 767px) {
@@ -21,6 +22,12 @@
         display: flex;
         border-bottom: 1px solid var(--c-light-3);
 
+        @media (max-width: 1279px) {
+            margin-inline: var(--margin-tablet);
+            flex-wrap: wrap;
+            padding-bottom: var(--margin-tablet);;
+        }
+
         @media (max-width: 767px) {
             flex-direction: column;
             align-items: center;
@@ -30,6 +37,14 @@
 
     &__logo {
         margin-right: 224px;
+
+        @media (max-width: 1439px) {
+            margin-right: 80px;
+        }
+
+        @media (max-width: 1279px) {
+            margin-right: var(--margin-tablet);
+        }
 
         @media (max-width: 767px) {
             margin-right: 0;
@@ -53,6 +68,10 @@
         text-transform: uppercase;
         margin-right: 60px;
 
+        @media (max-width: 1279px) {
+            margin-bottom: 20px;
+        }
+
         @media (max-width: 767px) {
             margin-bottom: var(--margin-mobile);
             margin-right: 0;
@@ -75,6 +94,10 @@
         line-height: 18px;
         color: var(--c-light);
         display: flex;
+
+        @media (max-width: 1279px) {
+            margin-inline: var(--margin-tablet);
+        }
 
         @media (max-width: 767px) {
             flex-direction: column;
@@ -122,6 +145,7 @@
 }
 
 .production {
+
 
     @media (max-width: 767px) {
         margin-bottom: var(--margin-mobile);
@@ -189,6 +213,10 @@
         list-style-type: none;
         margin-right: 220px;
 
+        @media (max-width: 1279px) {
+            margin-right: var(--margin-tablet);
+        }
+
         @media (max-width: 767px) {
             margin-right: 0;
         }
@@ -205,6 +233,10 @@
         padding: 0;
         list-style-type: none;
         margin-right: var(--margin-desktop);
+
+        @media (max-width: 1279px) {
+            margin-right: var(--margin-tablet);
+        }
 
         @media (max-width: 767px) {
             margin-bottom: var(--margin-mobile);
