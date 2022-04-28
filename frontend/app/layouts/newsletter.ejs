@@ -8,6 +8,9 @@
                    id="newsletter-email"
                    required>
             <%- require("../components/button/template.ejs")({
+                extraClasses: [
+                    "button--submit", "button-newsletter"
+                ],
                 label: "подписаться на новостную рассылку",
             }) %>
         </p>

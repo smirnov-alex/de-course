@@ -20,7 +20,7 @@
             <path d="M163.905 13.631L155.452 0.739746H158.833L165.173 10.9894L171.724 0.739746H175L166.547 13.631V23.4579H163.799V13.631H163.905Z"/>
         </svg>
     </a>
-    <nav class="header__nav main-nav">
+    <nav class="header__nav main-nav main-nav--nojs main-nav--closed">
         <ul class="main-nav__list">
             <li class="main-nav__item"><a class="main-nav__link" href="/">О компании</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="/">Продукция</a></li>
@@ -29,6 +29,10 @@
             <li class="main-nav__item"><a class="main-nav__link" href="/">Контакты</a></li>
         </ul>
     </nav>
+    <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+    </button>
+    <div class="header__buttons-wrapper">
     <%- require("../components/button/template.ejs")({
         extraAttrs: [
             `data-js-modal-open-button = '{"src": "#modal-feedback"}'`
@@ -40,7 +44,7 @@
     }) %>
     <%- require("../components/lang-switcher/template.ejs")({
         extraClasses: [
-            ""
+            "header__lang-switcher"
         ]
     }) %>
     <%- require("../components/button/template.ejs")({
@@ -50,5 +54,6 @@
         label: "",
         icon: "search"
     }) %>
+    </div>
 </header>
 <body>

@@ -1,5 +1,11 @@
+@import "../media.pcss";
+
 .main-nav {
     margin-right: auto;
+
+    @media (max-width: 1279px) {
+        display: none;
+    }
 
     &__list {
         margin: 0;
@@ -14,6 +20,10 @@
 
         &:not(:last-child) {
             margin-right: 40px;
+
+            @media(max-width: 1480px) {
+                margin-right: 20px;
+            }
         }
     }
 
@@ -35,4 +45,35 @@
             color: var(--c-main);
         }
     }
+    
+    &__toggle {
+        position: absolute;
+        top: 40px;
+        right: -8px;
+        z-index: 2;
+        display: block;
+        width: 32px;
+        height: 24px;
+        background-color: var(--c-light);
+        cursor: pointer;
+        border: none;
+        padding: 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 4px;
+            width: 24px;
+            height: 2px;
+            background-color: var(--c-main);
+            box-shadow: 0 8px 0 0 var(--c-main), 0 16px 0 0 var(--c-main);
+        }
+
+        @media (min-width: 1280px) {
+            display: none;
+
+        }
+    }
 }
+
