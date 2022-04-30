@@ -1,16 +1,35 @@
-<div class="modal modal--feedback" id="modal-feedback"
-     data-js-modal>
+<div class="modal modal--feedback" id="modal-feedback" data-js-modal>
     <header class="modal__header">
+        <h3 class="modal__title">Обратная связь</h3>
+        <p class="modal__subtitle">Оставьте Ваши данные, наш специалист свяжется с Вами в ближайшее время.</p>
         <div class="modal__title h3"></div>
     </header>
     <section class="modal__body">
         <form class="form" action="./json/exampleSuccessForm.json" method="get" autocomplete="off" novalidate data-js-form>
-            <input type="text" name="user-name" class="form-input" data-js-input-required="">
-            <input type="email" name="user-email" class="form-input" data-js-input-required="email">
+            <div class="form__user-data-wrapper">
+                <input type="text" name="user-name" class="form__input" placeholder="ФИО" data-js-input-required="">
+                <input type="tel" name="user-phone" class="form__input" placeholder="Телефон*" data-js-input-required="phone">
+                <input type="email" name="user-email" class="form__input" placeholder="Электронная почта*" data-js-input-required="email">
+            </div>
+            <textarea name="user-message" cols="30" rows="9" class="form__textarea" placeholder="Сообщение"></textarea>
+            <div class="form__captcha">
+                вставить каптчу
+            </div>
+            <div class="form__agreement-wrapper">
+                <input class="form__agreement" name="user-agreement" type="checkbox" id="form__agreement" checked
+                       required>
+                <label class="form__agreement-label" for="form__agreement">Согласен (согласна) с политикой
+                    конфиденциальности</label>
+            </div>
             <%- require("../components/button/template.ejs")({
                 label: "Отправить",
-                type: "submit"
+                type: "submit",
+                icon: "arrow-button",
+                extraClasses: [
+                    "button--modal"
+                ]
             }) %>
+
         </form>
     </section>
     <footer class="modal__actions">

@@ -7,12 +7,14 @@ export default class Validation {
   }
 
   static expression = {
-    email: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    email: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+    phone: /(^8|7|\+7)((\d{10})|(\s\(\d{3}\)\s\d{3}\s\d{2}\s\d{2}))/
   }
 
   static patterns = new Map([
     ["", (input) => Validation.isValidateEmpty(input)],
     ["email", (input) => Validation.isValidateEmail(input)],
+    ["phone", (input) => Validation.isValidatePhone(input)]
 
   ])
 
@@ -45,5 +47,9 @@ export default class Validation {
 
   static isValidateEmail(input) {
     return Validation.expression.email.test(input.value)
+  }
+
+  static isValidatePhone(input) {
+    return Validation.expression.phone.test(input.value)
   }
 }
