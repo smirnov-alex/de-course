@@ -5,6 +5,7 @@ import svg4everybody from 'svg4everybody';
 import SvgUse from './js/svgUse';
 import "./styles/icons.pcss";
 import "./styles";
+import "./js/burger"
 
 // Load components
 import "./components/button";

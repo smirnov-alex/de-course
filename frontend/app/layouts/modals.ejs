@@ -12,7 +12,7 @@
                 <input type="email" name="user-email" class="form__input" placeholder="Электронная почта*" data-js-input-required="email">
             </div>
             <textarea name="user-message" cols="30" rows="9" class="form__textarea" placeholder="Сообщение"></textarea>
-            <div class="form__captcha">
+            <div class="form__captcha" id="html_element">
                 вставить каптчу
             </div>
             <div class="form__agreement-wrapper">
@@ -31,6 +31,9 @@
             }) %>
 
         </form>
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+                async defer>
+        </script>
     </section>
     <footer class="modal__actions">
     </footer>

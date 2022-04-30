@@ -47,6 +47,21 @@
 
         @media(max-width: 1279px) {
             display: none;
+
+            &--opened {
+                display: flex;
+                flex-direction: column;
+                background-color: var(--c-light);
+                position: absolute;
+                z-index: 10;
+                top: 397px;
+                right: -40px;
+                padding-inline: 14px;
+
+                @media(max-width: 767px) {
+                    right: -21px;
+                }
+            }
         }
     }
 
@@ -60,6 +75,11 @@
     @media(max-width: 1480px) {
         margin-right: 10px;
     }
+
+    @media(max-width: 1279px) {
+        margin: 20px 0;
+        border-bottom: 1px solid var(--c-gray);
+    }
 }
 
 .button-search {
@@ -68,5 +88,10 @@
 
     @media(max-width: 1480px) {
         margin-left: 10px;
+    }
+
+    @media(max-width: 1279px) {
+        margin: 20px 0;
+        border-bottom: 1px solid var(--c-gray);
     }
 }
